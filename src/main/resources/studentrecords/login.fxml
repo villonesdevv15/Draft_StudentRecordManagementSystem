@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentrecords.LoginController">
+   <children>
+      <AnchorPane prefHeight="460.0" prefWidth="760.0" style="-fx-background-color: #e8f4e9;">
+         <children>
+
+            <!-- LEFT BRAND PANEL -->
+            <AnchorPane prefHeight="460.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #1B3A5C, #14532D);">
+               <children>
+                  <SVGPath content="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="white" layoutX="40.0" layoutY="60.0" scaleX="2.4" scaleY="2.4" />
+                  <Label layoutX="32.0" layoutY="115.0" prefHeight="64.0" prefWidth="250.0" text="Animo Records&#10;" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Region layoutX="32.0" layoutY="94.0" prefHeight="3.0" prefWidth="40.0" style="-fx-background-color: #4F8EF7;" />
+                  <Label layoutX="32.0" layoutY="179.0" prefWidth="220.0" text="Every record in place, every student's future in focus." textFill="#C9D6E6" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+
+            <!-- RIGHT FORM PANEL -->
+            <Label layoutX="350.0" layoutY="60.0" text="Sign in" textFill="#144b37">
+               <font>
+                  <Font name="Segoe UI Semibold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="104.0" text="Enter your credentials to access your account." textFill="#6B7280">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="350.0" layoutY="148.0" text="Username" textFill="#374151">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="350.0" layoutY="170.0" prefHeight="38.0" prefWidth="360.0" promptText="Enter your username" style="-fx-background-color: white; -fx-border-color: #D1D5DB; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 0 12 0 12; -fx-font-size: 13px;" />
+
+            <Label layoutX="350.0" layoutY="222.0" text="Password" textFill="#374151">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="350.0" layoutY="244.0" onAction="#handleLogin" prefHeight="38.0" prefWidth="360.0" promptText="Enter your password" style="-fx-background-color: white; -fx-border-color: #D1D5DB; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 0 12 0 12; -fx-font-size: 13px;" />
+
+            <Label fx:id="errorLabel" layoutX="350.0" layoutY="294.0" textFill="#DC2626">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>       
+
+            <Button fx:id="loginButton" defaultButton="true" layoutX="350.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="42.0" prefWidth="360.0" style="-fx-background-color: #14532D; -fx-background-radius: 4; -fx-text-fill: white; -fx-cursor: hand;" text="Sign In">
+               <font>
+                  <Font name="Segoe UI Semibold" size="13.0" />
+               </font>
+            </Button>
+
+            <Label layoutX="350.0" layoutY="410.0" text="Admin login: admin / admin123" textFill="#9CA3AF">
+               <font>
+                  <Font name="Segoe UI" size="11.0" />
+               </font>
+            </Label>
+
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
